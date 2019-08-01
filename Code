@@ -1,0 +1,13 @@
+Saved as in github -> saved as in MATLAB
+
+AIF_ConcentrationVsTime.m -> F11_IndividualAIF_generate_trialanderror.m
+AIF_SignalintensityVsTime.m -> F11_individualAIF_LargeArtery_tracking_DCE_LD_morefilter.m
+AIF_referenceregion_gluteal.m -> -F11_IndividualAIF_generate_muscleROI_ATTEMPT2.m
+FXL_simultaneousfit_function.m -> LDtermfunction.m
+FXR_simultaneousfit_function.m -> SIequationwithnoise_FXR_7_30.m
+filter_arterialAIF_toppercents.m -> F11_IndividualAIF_generate_top10percent.m
+R1VsTime_with_fit_ONEVOXEL.m -> T10mapping_UChicago_withKetyTofts_testONEvoxel.m
+kety_tofts_function.m -> kety_tofts.m
+scale_arterialAIF.m -> scalingAIF_prostate.m
+scale_arterialAIF_function.m -> scalingAIF_prostatefunction.m 
+simultaneousfit_wrapperfunction.m -> minimize_difference.m
