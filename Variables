@@ -1,0 +1,11 @@
+Flip angle: 10 degrees
+Time range FXL: [1:1:30]
+Time range FXR: [1:1:65]
+Unscaled AIF FXL: AIF_arterial
+Scaled AIF FXL: Cp_FXL
+Unscaled AIF FXR: Cp_FXR
+Reference region AIF: AIF_reference_gluteal
+T1 map (ms): T1map
+T1 map (s): T1map_sec
+Top 10% arterial AIF coordinates: chosen_artery10
+Top 10% arterial AIF (mM Vs. time): AIF_arterial_tenpercent
