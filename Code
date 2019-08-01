@@ -1,13 +1,51 @@
 Saved as in github -> saved as in MATLAB
 
 AIF_ConcentrationVsTime.m -> F11_IndividualAIF_generate_trialanderror.m
+  % uses SI time course for voxels and SPGRE equation to solve for c(t) aka measured AIF
+
 AIF_SignalintensityVsTime.m -> F11_individualAIF_LargeArtery_tracking_DCE_LD_morefilter.m
+  % filters voxel time courses that meet criteria and also added criteria
+      % remove all points that are not > 5*std(mean pre-contrast SI)
+      % remove if (max value SI) - (mean pre-contrast SI) < 5*(mean pre-contrast SI)
+      % remove if (mean post-contrast SI) - (mean pre-contrast SI) < 20*std(mean pre-contrast SI)
+      % remove if (mean of last 3 contrast SI) - (mean pre-contrast SI) > 0.85*((max value SI) - (mean pre-contrast SI))
+      % remove if (mean pre-contrast SI) <= 0
+      % remove if time-course does not have any SI value >= 1000000
+  % creates index for DCE_LD for SI curves with top (10%,15%,20%,25%) peak values
+
 AIF_referenceregion_gluteal.m -> -F11_IndividualAIF_generate_muscleROI_ATTEMPT2.m
+  % using coordinates for 400x400 image in arterynew2(Y,X,slice#) variable, finds average c(t) of gluteal muscle region
+  
 FXL_simultaneousfit_function.m -> LDtermfunction.m
+  % used with simultaneousfit_wrapperfunction.m
+  % will use FXL equation to output SI time course
+
 FXR_simultaneousfit_function.m -> SIequationwithnoise_FXR_7_30.m
+  % used with simultaneousfit_wrapperfunction.m
+  % will use FXR equation to output SI time course 
+  
 filter_arterialAIF_toppercents.m -> F11_IndividualAIF_generate_top10percent.m
+  % filters filtered arterial voxels from AIF_SignalintensityVsTime.m for top (10%,15%,20%,25%) peak SI value voxels
+  % top % arterial voxel coordinates stored in (chosen_artery10,chosen_artery15,chosen_artery20,chosen_artery25) variables
+
 R1VsTime_with_fit_ONEVOXEL.m -> T10mapping_UChicago_withKetyTofts_testONEvoxel.m
+  % forward generation of R1(t) time course for voxel
+    % SPGRE equation
+  % then fits for ktarns and ve with FXL model using generated R1(t) as ydata
+    % R1(t) = r1*[CA]+R10
+
 kety_tofts_function.m -> kety_tofts.m
+  % takes inputs for kety-tofts model and outputs c(t)
+
 scale_arterialAIF.m -> scalingAIF_prostate.m
+  % scales arterial AIF to a reference region C(t) time course
+  % outputs alpha scalar, multiply this by AIF_arterial_tenpercent to get scaled AIF
+
 scale_arterialAIF_function.m -> scalingAIF_prostatefunction.m 
+  % function used with scale_arterialAIF
+
 simultaneousfit_wrapperfunction.m -> minimize_difference.m
+  % takes guess for [ktrans,ve,T_i] and compares with assigned [ktrans,ve,T_i] SI time courses
+  % creates difference vector between simulated and guess data
+  % difference vector should go into lsqnonlin
+    % lsqnonlin(function_name, initial guess)
