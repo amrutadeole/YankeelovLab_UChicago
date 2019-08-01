@@ -9,3 +9,5 @@ T1 map (ms): T1map
 T1 map (s): T1map_sec
 Top 10% arterial AIF coordinates: chosen_artery10
 Top 10% arterial AIF (mM Vs. time): AIF_arterial_tenpercent
+DCE_LD (400x400 -> 320x320): reshaped_DCE_LD_array
+DCE_SD (400x400 -> 320x320): reshaped_DCE_SD_array
