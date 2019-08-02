@@ -1,13 +1,23 @@
-Flip angle: 10 degrees
-Time range FXL: [1:1:30]
-Time range FXR: [1:1:65]
+Flip angle (degrees): 10
+Time range FXL (time points): [1:1:30]
+Time range FXR (time points): [1:1:65]
 Unscaled AIF FXL: AIF_arterial
 Scaled AIF FXL: Cp_FXL
 Unscaled AIF FXR: Cp_FXR
 Reference region AIF: AIF_reference_gluteal
 T1 map (ms): T1map
 T1 map (s): T1map_sec
-Top 10% arterial AIF coordinates: chosen_artery10
+R1 map (s): R1_sec
+Top 10% arterial AIF coordinates (Y,X,slice#): chosen_artery10
 Top 10% arterial AIF (mM Vs. time): AIF_arterial_tenpercent
 DCE_LD (400x400 -> 320x320): reshaped_DCE_LD_array
 DCE_SD (400x400 -> 320x320): reshaped_DCE_SD_array
+Signal intensity (320x320x24): s_t
+Inherent signal intensity (320x320x24): s_inh
+Repetition time (s): TR
+Top 10(15,20,25)% AIF coordinates (Y,X,slice#): chosen_artery10(15,20,25)
+SI timecourse for FXL with true parameters: SD_SI_vector
+SI timecourse for FXL with guessed parameters: FXL_SI_vector
+SI timecourse for FXL with true parameters: LD_SI_vector
+SI timecourse for FXR with guessed parameters: FXR_SI_vector
+SI timecourse for FXR with true parameters: SD_SI_vector
