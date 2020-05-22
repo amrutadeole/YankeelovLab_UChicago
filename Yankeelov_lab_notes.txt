@@ -1,0 +1,7 @@
+working code for R1(t) Vs. time curve:
+	- equation5withktrans.m
+	- equation5function2withktrans.m
+	
+working code for SI Vs. time curve:
+	- SI_FXR_model_withktrans.m
+	- SIequationwithktrans.m     
